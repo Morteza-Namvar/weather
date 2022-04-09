@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Morteza Namvar" />
+    <title>Weather Application</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 768px)"
+      href="./css/mobile.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 1200px)"
+      href="./css/tablet.css"
+    />
+  </head>
+  <body>
+    <main id="main">
+      <!-- Data entry section -->
+      <section id="weather_entry">
+        <form>
+          <input
+            type="text"
+            id="input_city"
+            placeholder="Enter Your City ..."
+          />
+        </form>
+        <button class="btn" id="submit_city">SUBMIT</button>
+      </section>
+
+      <!-- Current Weather Status -->
+      <section id="weather_status">
+        <div class="bg-fade">
+          <div id="location">
+            <span id="current_city"></span>
+            <sup id="country"></sup>
+          </div>
+          <div id="temp_contain">
+            <span id="temp"></span>
+            <span class="celsius">°C</span>
+          </div>
+          <img alt="weather icon" id="w-icon" />
+          <div id="w-description"></div>
+          <time id="current_date"></time>
+        </div>
+      </section>
+
+      <!-- More info about weather -->
+      <section id="weather_info">
+        <div>
+          <h3>Humidity</h3>
+          <div class="numbers" id="humidity"></div>
+        </div>
+        <div>
+          <h3>Wind Speed (KPH)</h3>
+          <div class="numbers" id="wind_speed"></div>
+        </div>
+        <div>
+          <h3>Sunrise</h3>
+          <div class="numbers" id="sunrise"></div>
+        </div>
+        <div>
+          <h3>Sunset</h3>
+          <div class="numbers" id="sunset"></div>
+        </div>
+      </section>
+    </main>
+    <hr />
+    <footer>
+      <div>Designed By Morteza Namvar</div>
+    </footer>
+    <script src="./application/weather.js"></script>
+    <script src="./application/values.js"></script>
+    <script src="./application/app.js"></script>
+  </body>
+</html>

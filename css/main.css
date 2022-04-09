@@ -1,0 +1,177 @@
+/* Reset style */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background: rgb(32, 40, 61);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* utility */
+#main {
+    display: grid;
+    grid-template-areas:
+    'status entry'
+    'status info'
+    'status info';
+    gap: 10px;
+    height: 95vh;
+}
+main section {
+    text-align: center;
+}
+.numbers {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-weight: bold;
+    color: #005b72;
+}
+
+/* Weather status section */
+#weather_status{
+    grid-area: status;
+    background: rgb(32, 40, 61) url('../img/background.png') no-repeat center center/cover;
+    padding: 2rem;
+}
+.celsius {
+    font-size: 2rem;
+}
+sup {
+    background: orangered;
+    color: white;
+    border-radius: 50%;
+    padding: 3px;
+    position: relative;
+    top: -15px;
+    right: 0;
+    left: 0;
+}
+.bg-fade {
+    background: rgba(255, 255, 255, 0.767);
+    border-radius: 10px;
+    padding: 1rem;
+    
+}
+.bg-fade h1, img, div {
+    margin: 1rem;
+}
+#temp {
+    font-size: 60px;
+    font-weight: bold;
+}
+#current_date {
+    font-style: italic;
+    font-size: 0.7rem;
+}
+#w-description{
+    margin: 0 0 2.5rem 0;
+    
+}
+#current_city {
+    font-size: 3rem;
+}
+
+/* Data entry section  */
+#weather_entry {
+    grid-area: entry;
+    align-self: center;
+}
+#temp_contain {
+    margin-top: 2rem;
+}
+
+.btn {
+    background: #ff1e42;
+    padding: 0.7rem 5rem;
+    border: transparent;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+    margin-top: 2rem;
+    transition: box-shadow 0.3s;
+    position: relative;
+    cursor: pointer;
+} 
+.btn:hover{
+    box-shadow: inset 0px 0px 10px #ac122c;
+}
+.btn::before{
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition: all 1.5s;
+}
+.btn:hover::before{
+    transform: scale(1.2);
+    border: 1px solid transparent;
+}
+
+input {
+    margin: 1.5rem;
+    padding: 0.5rem;
+    width: 70%;
+    border: 1px transparent;
+    border-bottom: 1px solid white;
+    background:rgb(32, 40, 61) ;
+    font-size: large;
+    color: white;
+}
+input:focus {
+    color: white;
+    outline: none;
+    
+}
+
+/* Weather Info section */
+
+#weather_info {
+    grid-area: info;
+    display: grid;
+    justify-content: center;
+    grid-template-areas:
+    'humid wSpeed'
+    'sunrise sunset';
+    gap: 20px;
+    padding: 2rem;
+}
+
+#weather_info div {
+    padding: 1rem;
+    background: white;
+    border-radius: 5px;
+    min-width: 200px;
+    box-shadow: 5px 5px 1px #ffffff23;
+    align-self: center;
+}
+#humidity {
+    grid-area: humid;
+    font-size: 1.5rem;
+}
+#wind_speed {
+    grid-area: wSpeed;
+    font-size: 1.5rem;
+}
+#sunrise {
+    grid-area: sunrise;
+    font-size: 1.5rem;
+}
+#sunset {
+    grid-area: sunset;
+    font-size: 1.5rem;
+}
+
+/* footer */
+footer div {
+    color: #fff;
+    font-size: 0.7rem;
+    text-align: center;
+    padding: 0;
+    margin: 0.5rem 0;
+}
